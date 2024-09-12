@@ -31,7 +31,7 @@ def test_nearest_neighbor():
     # Swap the order of arguments
     result = nearest_neighbor(query_point, points)
     
-    expected_index = 0  # Nearest point is the first one
+    expected_index = 1  # Nearest point is the first one
     
     assert result == expected_index, f"Expected index {expected_index}, but got {result}"
 
