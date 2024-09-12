@@ -25,13 +25,14 @@ def test_cosine_similarity():
     assert np.isclose(result, expected_result), f"Expected {expected_result}, but got {result}"
 
 def test_nearest_neighbor():
-    points = np.array([[1, 2], [3, 4], [5, 6]])
-    query_point = np.array([2, 3])
+    points = np.array([[1, 2], [3, 4], [5, 6]])  # Vectors (matrix)
+    query_point = np.array([2, 3])  # Target vector
     
-    # Fix the order of arguments: query_point (target_vector) should come first
+    # Swap the order of arguments
     result = nearest_neighbor(query_point, points)
     
     expected_index = 0  # Nearest point is the first one
     
     assert result == expected_index, f"Expected index {expected_index}, but got {result}"
+
 
