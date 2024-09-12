@@ -30,8 +30,10 @@ def nearest_neighbor(target_vector, vectors):
     
     for i, vector in enumerate(vectors):
         similarity = cosine_similarity(target_vector, vector)
+        # Ensure we're comparing scalars, not arrays
         if similarity > best_similarity:
             best_similarity = similarity
             best_index = i
             
     return best_index
+

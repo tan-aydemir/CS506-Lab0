@@ -28,8 +28,10 @@ def test_nearest_neighbor():
     points = np.array([[1, 2], [3, 4], [5, 6]])
     query_point = np.array([2, 3])
     
-    result = nearest_neighbor(points, query_point)
+    # Fix the order of arguments: query_point (target_vector) should come first
+    result = nearest_neighbor(query_point, points)
     
     expected_index = 0  # Nearest point is the first one
     
     assert result == expected_index, f"Expected index {expected_index}, but got {result}"
+
