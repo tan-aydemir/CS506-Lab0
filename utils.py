@@ -30,9 +30,11 @@ def nearest_neighbor(target_vector, vectors):
     
     for i, vector in enumerate(vectors):
         similarity = cosine_similarity(target_vector, vector)
-        if similarity > best_similarity:
-            best_similarity = similarity
+        similarity_value = np.mean(similarity)  # or any appropriate reduction to a scalar
+        if similarity_value > best_similarity:
+            best_similarity = similarity_value
             best_index = i
+
     
     return best_index
 
