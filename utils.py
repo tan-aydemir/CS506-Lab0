@@ -35,3 +35,4 @@ def nearest_neighbor(target_vector, vectors):
             best_index = i
     
     return best_index
+
